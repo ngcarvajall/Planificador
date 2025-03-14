@@ -5,14 +5,13 @@ from docx.enum.section import WD_ORIENTATION
 from datetime import date
 import locale
 
+# Configurar la página de Streamlit
+st.set_page_config(page_title="Generador de Planificaciones", page_icon="📚")
+
 try:
     locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
 except locale.Error:
     st.warning("⚠️ Advertencia: No se pudo establecer la configuración regional 'es_ES.UTF-8'. Se usará la configuración por defecto.")
-
-
-# Configurar la página de Streamlit
-st.set_page_config(page_title="Generador de Planificaciones", page_icon="📚")
 
 st.title("📚 Generador de Planificaciones Diarias para Docentes")
 
